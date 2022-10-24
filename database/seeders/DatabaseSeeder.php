@@ -16,25 +16,31 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
+        User::create([
+            'name' => 'Dicky Kurnia Ramadhan',
+            'username' => 'kurniadhn',
+            'email' => 'admin@gmail.com',
+            'password' => bcrypt('laravel')
+        ]);
+
         User::factory(3)->create();
+
+        Category::create([
+            'name' => 'Gaming',
+            'slug' => 'gaming'
+        ]);
+
+        Category::create([
+            'name' => 'Music',
+            'slug' => 'music'
+        ]);
 
         Category::create([
             'name' => 'Web Programming',
             'slug' => 'web-programming'
         ]);
 
-        Category::create([
-            'name' => 'Web Design',
-            'slug' => 'web-design'
-        ]);
-
         Post::factory(20)->create();
-
-        // User::create([
-        //     'name' => 'Kuur',
-        //     'email' => 'dickynakiri@gmail.com',
-        //     'password' => bcrypt('12345')
-        // ]);
 
         // Post::create([
         //     'title' => 'Judul Pertama',

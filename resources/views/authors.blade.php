@@ -5,7 +5,7 @@
     @foreach($authors as $author)
         <ul>
             <li>
-                <a href="/author/{{ $author->username }}"><h2>{{ $author->name }}</a></h2>
+                <a href="/posts?author={{ $author->username }}"><h2>{{ $author->name }}</a></h2>
             </li>
         </ul>
     @endforeach
